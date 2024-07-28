@@ -1,6 +1,6 @@
 FROM golang:1.22.5 as base
 WORKDIR /app
-COPY main.go .
+COPY go.mod .
 RUN go mod download
 COPY . .
 RUN go build -o main .
